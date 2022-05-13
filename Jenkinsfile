@@ -18,10 +18,10 @@ pipeline {
                 }
             }
         }
-    //     stage('Sonar-Report') {
-    //         steps {
-    //         sh 'mvn clean install sonar:sonar -Dsonar.host.url=http://44.202.186.72:9000 -Dsonar.analysis.mode=publish -Dsonar.login=admin -Dsonar.password=Ujjwal@123'
-    //     }
-    // }
+        stage('deploy') {
+            steps {
+            sh '~/deployment.sh'
+        }
+    }
 }
 }
